@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.content{
+		height: 600px;
+		background-color: #eBeBe0;
+	}
+	.about{
+		max-width: 600px;
+		margin: 0 auto;
+		transform-style: preserve-3d;
+		transform: perspective(800px);
+	}
+	.about h2{
+		text-transform: uppercase;
+		font-size: 50px;
+		font-weight: 400;
+	}
+	.about h2,.about p{
+		transition:  all 0.8s ease;
+	}
+	.about.hidden h2{
+		opacity: 0;
+		transform: translate3d(0,0,400px) rotateY(40deg);
+	}
+	.about.hidden p{
+		opacity: 0;
+		transform: translate3d(0,0,400px) rotateY(-40deg);
+	}
+</style>
+<body>
+	<div class="content"></div>
+	<div class="about hidden">
+		<h2>This isd heading</h2>
+		<p>Sau đó kiểm tra email nhập vào bỏ trống hay không nếu không thì kiểm tra xem có đúng với  khuôn dạng reg_email không nếu không đúng khuôn dạng sẽ đưa ra thông báo lỗi.
+var email = document.getElementById(’email’);</p>
+	</div>
+	<div class="content"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var aboutEL=$('div.about'),
+				aboutELoffset=aboutEL.offset().top/2;
+				
+			    $(document).on('scroll',function(){
+					if($(document).scrollTop() > aboutELoffset && aboutEL.hasClass('hidden'))
+					 {
+						aboutEL.removeClass('hidden');
+					}
+			});
+		});
+	</script>
+</body>
+</html>

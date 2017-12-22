@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+/* css cho button*/
+#banner button{
+  background:red;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:20px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 5px;
+}
+/* khi hover vao button hieu ung tao ra*/
+#banner button:hover{
+  background:#fff;
+  color:red;
+}
+/*  */
+body:before{
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+/* */
+#banner button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+/**/
+#banner button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: red;
+  transition:400ms ease all;
+}
+/**/
+#banner button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+</style>
+<body>
+<div id="banner">
+	<button>CLICK ME</button>
+</div>
+</body>
+</html>

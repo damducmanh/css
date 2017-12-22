@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="font">
+                <div class="nv">
+                    
+                </div>
+            </div>
+            <div class="back">
+                <a href="#">
+                </a>
+            </div>
+            <div class="left">
+                
+            </div>
+            <div class="right">
+                
+            </div>
+            <div class="bottom">
+                 <a href="#">
+                 </a> 
+            </div>
+            <div class="top">
+                <a href="#">
+                </a>  
+            </div>
+            <div class="cut">
+                <a href="#">
+                </a>  
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        var step=2;
+        setInterval(function(){
+            $('.box').addClass('step'+step).removeClass('step'+(step-1));
+            step++;
+        
+        },1000);
+
+        });
+    </script>
+</body>
+</html>

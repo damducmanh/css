@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#container{
+		width: 400px;
+		height: 400px;
+		margin: 300px auto;
+		perspective: 800px;
+		
+	}
+	#box{
+		width: 400px;
+		transform-style: preserve-3d;
+		animation: rotate 15s linear infinite;
+	}
+	#box div{
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		opacity: 0.8
+	}
+	/**/
+	#font{
+		transform: translateZ(200px);
+		
+	}
+	.a{
+		background: black;
+	}
+	/**/
+	#back{
+		transform: rotateY(180deg) translateZ(200px);
+		
+	}
+	.b{
+		background:#cdcdcd;
+	}
+	#left{
+		transform: rotateY(-90deg) translateX(-200px) ;
+		transform-origin: left;
+		
+	}
+	.c{
+		background:green;
+	}
+	#right{
+		transform: rotateY(90deg) translateX(200px) ;
+		transform-origin: right;
+		
+	}
+	.d{
+		background:blue;
+	}
+	#top{
+		transform: rotateX(-90deg) translateY(-200px) ;
+		transform-origin: top;
+		
+	}
+	.e{
+		background:red;
+	}
+	#bottom{
+		transform: rotateX(90deg) translateY(200px) ;
+		transform-origin: bottom;
+		
+	}
+	.f{
+		background:tomato;
+	}
+	@keyframes rotate{
+		0%{
+			transform: rotateY(0);
+		}
+		50%{
+			transform: rotateY(360deg);
+		}
+		100%{
+			transform: translateY(0);
+		}
+
+	}
+</style>
+<body>
+	<div id="container">
+			<div id="box">
+				<div id="font" class="a"><iframe width="100%" height="315" src="https://www.youtube.com/embed/MDTm2BOSHnY" frameborder="0" allowfullscreen></iframe></div>
+				<div id="back" class="b"></div>
+				<div id="left" class="c"></div>
+				<div id="right" class="d"></div>
+				<div id="top" class="e"></div>
+				<div id="bottom" class="f"></div>
+			</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#font').click(function(){
+				$('#font').removeClass('a');
+			});
+			$('#back').click(function(){
+				$('#back').removeClass('b');
+			});
+			$('#left').click(function(){
+				$('#left').removeClass('c');
+			});
+			$('#right').click(function(){
+				$('#right').removeClass('d');
+			});
+			$('#bottom').click(function(){
+				$('#bottom').removeClass('e');
+			});
+			$('#top').click(function(){
+				$('#top').removeClass('f');
+			});
+		},100);
+	</script>
+</body>
+</html>

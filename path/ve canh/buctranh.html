@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style type="text/css">
+  body {
+    position: relative;
+
+}
+.wr{
+  animation:doimau 15s ;
+  z-index: 10;
+  position: absolute;
+  margin: auto;
+  height: 760px;
+  width: 1300px;
+}
+@keyframes doimau{
+  0%{
+    z-index: 10;
+  }
+  80%{
+    z-index: 10;
+  }
+  100%{
+    z-index: 8;
+  }
+}
+.wr1{
+  position: relative;
+  overflow: hidden;
+  border:5px solid black;
+  height: 760px;
+  width: 1300px;
+  background:url(https://previews.123rf.com/images/denisdemidenko/denisdemidenko1310/denisdemidenko131000031/22960903-Seamless-landscape-cartoon-fantastic-background-Vector--Stock-Photo.jpg);
+  background-position:cover;
+  background-repeat: no-repeat;
+}
+.wrkt{
+  z-index: 9;
+  position: absolute;
+  background:rgba(0,0,0,0.3);
+  height: 760px;
+  width: 1300px;
+}
+.container {
+  position: absolute;
+  margin: auto;
+  top: 420px;
+  bottom: 0;
+  left: -150px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  transform: rotate(-50deg);
+}
+
+.dau {
+  width: 200px;
+  height: 100px;
+  border-color: #777;
+  border-style: solid;
+  border-width: 100px  0 0 0 ;
+  border-radius: 100%;
+  position: relative;
+}
+
+.dau:before {
+  content:"";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  border: 28px solid #777;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+
+.minh {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  width: 160px;
+  height: 180px;
+  background: #777;
+  border-radius: 100%;
+}
+
+.minh:before {
+  position: absolute;
+  top: 120px;
+  left: -10px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #777;
+  border-radius: 5px;
+  transform: rotate(-40deg);
+}
+
+.minh:after {
+  position: absolute;
+  top: 150px;
+  left: 15px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #777;
+  border-radius: 5px;
+  transform: rotate(-40deg);
+  transition: ngoaychantrai 2s infinite;
+}
+
+.mat {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: #FFF;
+}
+
+.mat-trong {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #000;
+  animation-direction: alternate;
+  animation:ngoaymat 10s infinite ;
+}
+
+.tai {
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  width: 90px;
+  height: 70px;
+  background: #EDBBB4;
+  border-radius: 100%;
+  animation-direction: alternate;
+  animation:ngoaytai 4s ease 3s infinite ;
+}
+
+.duoi {
+	animation-direction: normal;
+  position: absolute;
+  top: 193px;
+  left: 190px;
+  width: 10px;
+  height: 40px;
+  background: #777;
+  animation:ngoayduoi 5s infinite linear;
+  transform-origin: 10px 10px; 
+}
+@keyframes ngoayduoi{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-40deg);
+	}
+	100%{
+		transform: rotate(30deg);
+	}
+}
+	@keyframes ngoaymat{
+		0%{
+			transform: translateX(0);
+		}
+		50%{
+			transform: translateX(4px);
+		}
+		100%{
+			transform: translateY(2px);
+		}
+	}
+	@keyframes ngoaytai{
+		0%{
+			transform: rotate(0);
+			transform-origin: 10px 10px ;
+		}
+		100%{
+			transform: rotate(25deg);
+			transform-origin: 10px 10px ;
+
+		}
+	}
+	@keyframes ngoaychantrai{
+		0%{
+			transform: translate(10px);
+			
+		}
+		100%{
+			ransform: translate(40px);
+		}
+	}
+	.conco{
+		overflow: hidden;
+		position: absolute;
+		width: 175px;
+		height: 170px;
+		background:url(conco3.png); 
+		animation: cobay 2s steps(14) infinite,chay 5s steps(100) infinite;
+    animation-delay: 3s;
+    margin-left:-12%;
+	}
+	@keyframes cobay{
+		from{
+			background-position: 0px;
+		}
+		to{
+			background-position: 2455px;
+		}
+	}
+	@keyframes chay{
+		0%{
+			margin-left:-10%;
+			transform:translateX(0px);
+		}
+		10%{
+			margin-left:10%;
+			transform:translateY(400px);
+		}
+		100%{
+			margin-left:120%;
+		}
+	}
+  .may{
+    width: 100%;
+    position: absolute;
+    z-index: 100000;
+   
+  }
+  .may img{
+    position: absolute;
+  }
+  .may .may1{
+     animation: may 50s infinite;
+  }
+   .may .may2{
+     animation: may 60s infinite;
+  }
+   .may .may3{
+     animation: may 40s infinite;
+  }
+    .may .may4{
+     animation: may 90s infinite;
+  }
+    .may .may5{
+     animation: may 100s infinite;
+  }
+  @keyframes may {
+    100%{
+      margin-left: 120%;
+    }
+  }
+ .convit{
+  background: url(convit2.png);
+  top: 680px;
+  width:108px;
+  height:115px;
+  position: absolute;
+  overflow: hidden;
+  animation: convit 2s steps(12) infinite,vitchay 10s steps(100) infinite ;
+ }
+ @keyframes convit{
+    from{
+      background-position: 0px;
+    }
+    to{
+      background-position: 1296px;
+    }
+ }
+ @keyframes vitchay{
+    0%{
+      margin-left:0;
+    }
+    40%{
+      margin-left: 20%;
+    }
+    80%{
+
+      margin-left: 21%;
+    }
+   100%{
+      margin-left:120%;
+    }
+ }
+ .tree img{
+  animation: baymat 2s ;
+  animation-delay: 3.4s;
+  animation-iteration-count: 1;
+  position: absolute;
+  top: 480px;
+  left: 300px;
+ }
+/* @keyframes baymat{
+  0%{
+    transform: translateY(0);
+    
+  }
+  50%{
+     transform: rotate(90deg);
+     
+  }
+  100%{
+     transform: rotate(90deg);
+     animation-play-state: paused;
+     
+  }
+ }*/
+ .flower1 img{
+  position: absolute;
+  top: 420px;
+  left: 250px;
+ }
+ .flower2{
+  width: 256px;
+  height: 260px;
+  overflow: hidden;
+  position: absolute;
+  background: url(flower2.png);
+  top:500px;
+  left:1100px;
+  animation:cayhoa 40s steps(18) infinite;
+ }
+ @keyframes cayhoa{
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position:4608px;
+  }
+ }.mattroi img{
+ 
+ }
+ .mt1,.mt2{
+  position: absolute;
+ }
+ .mt1{
+  left: 1000px;
+ }
+ .mt2{
+  left: 850px;
+  top: 40px;
+  animation: maytre 70s infinite;
+ }
+ @keyframes maytre {
+  0%{
+    margin-left:0px; 
+  }
+  100%{
+    margin-left:450px; 
+    
+  }
+ }
+</style>
+<body>
+  <div class="wr">
+    <div class="wr1">
+    <div class="may">
+      <img class="may1" src="may.png" alt="" width="150px">
+      <img class="may2" src="may.png" alt="" width="50px">
+      <img class="may3" src="may.png" alt="" width="120px" style="left:200px;top: 10px;">
+      <img class="may4" src="may.png" alt="" width="44px" style="left:400px;top: 20px">
+      <img class="may5" src="may.png" alt="" width="60px" style="left:300px;top: 40px">
+    </div>
+    <div class="container">
+        <div class="dau">voi</div>
+        <div class="minh">voi
+          <div class="tai">voi</div>
+        </div>
+        <div class="mat">
+          <div class="mat-trong"></div>
+        </div>
+        <div class="duoi">voi </div>
+    </div>
+    <div class="conco">
+    	
+    </div>
+    <div class="convit">
+      
+    </div>
+    <div class="tree">
+      <img src="tree.png" width="100px">
+    </div>
+    <div class="flower1">
+      <img src="flower1.png">
+    </div>
+    <div class="flower2">
+    </div>
+    <div class="mattroi">
+      <img class="mt1" src="mattroi.png" width="120px" >
+      <img class="mt2" src="maytroi.png" width="180px" >
+    </div>
+    </div>
+  </div>
+  <div class="wrkt"></div>
+</body>
+</html>

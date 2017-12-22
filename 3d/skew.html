@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+	body{
+		background:tomato;
+	}
+	.text{
+		position: absolute;
+		top: 20%;
+		left: 20%;
+		width:1000px;
+		height: 200px;
+		overflow: hidden;
+		transition: all 1s;
+	}
+	.text:hover span:nth-child(odd){
+		transform: skewY(0deg);
+	}
+	.text:hover span:nth-child(even){
+		transform: skewY(0deg);
+	}
+	span{
+		margin-top: 65px;
+		transition: all 1s;
+		float: left;
+		display: block;
+		width:120px;
+		line-height: 70px;
+		height: 70px;
+		font-size: 40px;
+		color: #cdcdcd;
+		background: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-align: center;
+	}
+	span:nth-child(odd){
+		transform: skewY(-45deg);
+	}
+	span:nth-child(even){
+		transform: skewY(45deg);
+	}
+</style>
+<body>
+	<div class="text">
+		<span>D</span>
+		<span>U</span>
+		<span>C</span>
+		<span>M</span>
+		<span>A</span>
+		<span>N</span>
+		<span>H</span>
+	</div>
+</body>
+</html>

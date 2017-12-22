@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+			setTimeout(function(){
+				$('.a').removeClass('b');
+			});
+
+		});
+</script>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+	background: tomato;
+}
+	h1{
+		position: absolute;
+		top: 50%;
+		left: 30%;
+		font-size:50px;
+		transform: translate(-50%;-50%);
+	}
+	h1 span{
+		display: table-cell;
+		padding: 3px 5px;
+		background:white;
+		color: black;
+		box-shadow:inset 0 5px 2px black ,0 5px 0 black;
+		animation: dichuyen 1s infinite;
+		animation-delay: 2s;
+		transition: 2s;
+	}
+	.container{
+		overflow: hidden;
+		width:1000px;
+		height: 300px;
+		background: red;
+		position: absolute;
+		top: 20%;
+		left: 20%;
+	}
+	@keyframes dichuyen {
+		0%{
+			transform: translateY(0px);
+		}
+		50%{
+			transform: translateY(-30px);
+		}
+		100%{
+			transform: translateY(0px);
+		}
+	}
+	h1 span:nth-child(1){
+		animation-delay: 1.2s;
+	}
+	h1 span:nth-child(2){
+		animation-delay: 1.3s;
+	}
+	h1 span:nth-child(3){
+		animation-delay: 1.5s;
+	}
+	h1 span:nth-child(4){
+		animation-delay: 1.9s;
+	}
+	h1 span:nth-child(5){
+		animation-delay: 1.5s;
+	}
+	h1 span:nth-child(6){
+		animation-delay: 1s;
+	}
+	h1 span:nth-child(7){
+		animation-delay: 1.3s;
+	}
+	h1 span:nth-child(8){
+		animation-delay: 1.4s;
+	}
+	h1 span:nth-child(9){
+		animation-delay: 1.5s;
+	}
+	h1 span:nth-child(10){
+		animation-delay: 1.2s;
+	}
+
+
+	.b span:nth-child(1){
+		transform: translateX(300px);
+	}
+	.b span:nth-child(2){
+		transform: translateY(400px);
+	}
+	.b span:nth-child(3){
+		transform: translate(50px,400px);
+	}
+	.b span:nth-child(4){
+		transform: translate(80px,400px);
+	}
+	.b span:nth-child(5){
+		transform: translate(150px,400px);
+	}
+	.b span:nth-child(6){
+		transform: translate(100px,-300px);
+	}
+	.b span:nth-child(7){
+		transform: translate(20px,-300px);
+	}
+	.b span:nth-child(8){
+		transform: translate(150px,-350px);
+	}
+	.b span:nth-child(9){
+		transform: translate(120px,-300px);
+	}
+	.b span:nth-child(10){
+		transform: translate(100px,-380px);
+	}
+</style>
+<body>
+	<div class="container">
+		<h1 class="a b">
+			<span>D</span>
+			<span>A</span>
+			<span>M</span>
+			<span>D</span>
+			<span>U</span>
+			<span>C</span>
+			<span>M</span>
+			<span>A</span>
+			<span>N</span>
+			<span>H</span>
+		</h1>
+	</div>
+</body>
+</html>
